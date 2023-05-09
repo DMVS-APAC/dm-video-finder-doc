@@ -8,7 +8,7 @@ Dailymotion Seach Iframe is a Iframe based solution to search videos from given 
 - Embed Code:
 ```html
 <iframe src="https://staging.dmvs-apac.com/SearchIframe/lab/iframe.html?sort=relevance&owners=indiatoday" ></iframe>
-``
+```
 - Iframe is able to capture information from its query parameters. 
 - Iframe is able to send and listen events with host site.
 

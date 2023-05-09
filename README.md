@@ -34,3 +34,6 @@ window.addEventListener("message",(msg)=>{
 | Event Name | Information | 
 | :---: | :---: |
 | `dm-search-click` | ``` {id:{VIDOE_ID}, thumbnail_480_url:{VIDEO_THUMBNAIL}, duration:{VIDEO_DURATION}}``` |
+
+### Test page : 
+- https://staging.dmvs-apac.com/SearchIframe/lab/index.html

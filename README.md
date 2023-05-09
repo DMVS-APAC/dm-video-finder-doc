@@ -16,6 +16,7 @@ Dailymotion Seach Iframe is a Iframe based solution to search videos from given 
 Although its not mandatory, you can send information as query parameters along with iframe url while iframe is loaded.
 
 | Query Param Name | Type | Description | 
+| :---: | :---: | --- |
 | sort | string | To select the sorting order for search result as default. You can set as 'recent`,`relevance`,`random`. [API reference](https://developers.dailymotion.com/api/#video-sort-filter) |
 | owners | string | to add the channels name for search result as default. To put more than 1 you can separate by "," |
 

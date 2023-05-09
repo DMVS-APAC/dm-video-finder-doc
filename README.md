@@ -5,7 +5,7 @@ Dailymotion Seach Iframe is a Iframe-based solution to search videos from given 
 ## Basic Information: 
 - Iframe URL : https://google.com
 
-- Embed Code:
+- **Embed Code:**
 ```html
 <iframe src="https://staging.dmvs-apac.com/SearchIframe/lab/iframe.html?sort=relevance&owners=indiatoday" ></iframe>
 ```

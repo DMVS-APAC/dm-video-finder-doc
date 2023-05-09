@@ -33,7 +33,5 @@ window.addEventListener("message",(msg)=>{
 ### Events from Iframe :
 | Event Name | Information | 
 | :---: | :---: |
-| `dm-search-click` | ```
-{hello: 6}
-``` |
+| `dm-search-click` | ```{hello: 6}``` |
 

@@ -45,6 +45,11 @@ document.getElementById('searchIframe').contentWindow.postMessage( {
      from: "dm-parent-add-suggestion", // event name
      info : ["CHANNEL_NAME_1", "CHANNEL_NAME_2", ...] // array of channel names
 },"*");
+
+document.getElementById('searchIframe').contentWindow.postMessage( {
+    from: "dm-parent-add-style",
+    info : "https://staging.dmvs-apac.com/SearchIframe/lab/custom-style.css"
+},"*");
 ```
 | Event Name | Information | 
 | :---: | :---: |

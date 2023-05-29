@@ -49,7 +49,6 @@ document.getElementById('searchIframe').contentWindow.postMessage( {
 | Event Name | Information | 
 | :---: | :---: |
 | `dm-parent-add-suggestion` | ``` ["CHANNEL_NAME_1", "CHANNEL_NAME_2", ...]``` |
-| :---: | :---: |
 | `dm-parent-add-style` | link address for style. eg.,`https://staging.dmvs-apac.com/SearchIframe/lab/custom-style.css` |
 
 ### Test page : 

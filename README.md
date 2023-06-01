@@ -32,6 +32,7 @@ window.addEventListener("message",(msg)=>{
   }
 })
 ```
+
 ### Events from Iframe :
 | Event Name | Information | 
 | :---: | :---: |
@@ -39,6 +40,7 @@ window.addEventListener("message",(msg)=>{
 
 ### Events To Iframe :
 The iframe can also listen to events from the host page if any information is required to pass to the iframe. Here is how an event is sent.
+
 ```JS
 // To add suggestion list of channels
 document.getElementById('searchIframe').contentWindow.postMessage( {
@@ -51,6 +53,7 @@ document.getElementById('searchIframe').contentWindow.postMessage( {
     info : "https://staging.dmvs-apac.com/SearchIframe/lab/custom-style.css"
 },"*");
 ```
+
 | Event Name | Information | 
 | :---: | :---: |
 | `dm-parent-add-suggestion` | ``` ["CHANNEL_NAME_1", "CHANNEL_NAME_2", ...]``` |

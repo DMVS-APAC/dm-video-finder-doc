@@ -37,7 +37,7 @@ window.addEventListener("message",(msg)=>{
 
 | Event Name | Information | 
 | :---: | :---: |
-| `dm-search-loaded` | To infor iframe is loaded. It can be used as a start point to sent event into iframe. |
+| `dm-search-loaded` | To inform iframe is loaded. It can be used as a start point to sent event into iframe. |
 | `dm-search-click` | ``` {id:{VIDOE_ID}, thumbnail_480_url:{VIDEO_THUMBNAIL}, duration:{VIDEO_DURATION}}``` |
 
 ### Events To Iframe :

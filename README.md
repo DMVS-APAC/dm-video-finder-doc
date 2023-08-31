@@ -1,6 +1,6 @@
-# Dailymotion Universal Advance Search 
+# Dailymotion Video Finder Pro
 
-Dailymotion Universal Advance Search is an Iframe-based solution to search videos from given channels(`owners`). The iframe is also able to communicate with the host via [`cross-window-communication`](https://javascript.info/cross-window-communication).
+Dailymotion Video Finder Pro is an Iframe-based solution to search videos from given channels(`owners`). The iframe is also able to communicate with the host via [`cross-window-communication`](https://javascript.info/cross-window-communication).
 
 ## Basic Information: 
 - Iframe URL: https://staging.dmvs-apac.com/SearchIframe/lab/iframe.html

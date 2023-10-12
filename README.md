@@ -31,9 +31,9 @@ or
 shortFilter=[exclude_channel_ids=tv,longer_than=1]
 ```
 > Category is called channel in API.
-
-<details>
-  <summary>Click me</summary>
+>
+><details>
+>  <summary>Click me</summary>
   
 | id         | name                   |
 |------------|------------------------|

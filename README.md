@@ -24,7 +24,7 @@ Although it is not mandatory, you can send information as query parameters along
 | shortFilter | string | To add a checkbox to filter out short videos. Details |
 
 ## shortFilter :
-The `shortFilter` query param enables to add filters ( API filters ) to get expected videos in search result. It can add more than filters by `","`. like
+The `shortFilter` query param enables to addition of filters ( API filters ) to get expected videos in search results. It can add more than filters by `","`. like
 ```
 shortFilter=[exclude_channel_ids=tv]
 or 
@@ -32,10 +32,10 @@ shortFilter=[exclude_channel_ids=tv,longer_than=1]
 ```
 > Category is called [channel in API]((https://api.dailymotion.com/channels)).
 <details>
-<summary> Category ids and names based on API </summary>
+<summary> Category IDs and names based on API </summary>
 
   
-| Channnel id         | Category name                   |
+| Channnel ID        | Category name                   |
 |------------|------------------------|
 | animals    | Animals                |
 | auto       | Cars                   |

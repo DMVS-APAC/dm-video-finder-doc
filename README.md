@@ -30,14 +30,13 @@ shortFilter=[exclude_channel_ids=tv]
 or 
 shortFilter=[exclude_channel_ids=tv,longer_than=1]
 ```
-> Category is called channel in API.
->
-><details>
->  <summary>Click me</summary>
+> Category is called [channel in API]((https://api.dailymotion.com/channels)).
+<details>
+<summary> Category Ids and Name based on API </summary>
   
->  | id         | name                   |
->  |------------|------------------------|
->  | animals    | Animals                |
+| id         | name                   |
+|------------|------------------------|
+| animals    | Animals                |
 | auto       | Cars                   |
 | people     | Celeb                  |
 | fun        | Comedy & Entertainment |

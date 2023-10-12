@@ -34,7 +34,7 @@ shortFilter=[exclude_channel_ids=tv,longer_than=1]
 
 <details>
   <summary>Click me</summary>
-| id         | name                   |
+  | id         | name                   |
 |------------|------------------------|
 | animals    | Animals                |
 | auto       | Cars                   |

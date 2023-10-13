@@ -21,10 +21,10 @@ Although it is not mandatory, you can send information as query parameters along
 | sort | string | To select the sorting order for search results as default. You can set it as `recent`, `relevance`, or `random`. [API reference](https://developers.dailymotion.com/api/#video-sort-filter) |
 | owners | string | To add the channels name for search results as default. To put more than 1 you can separate by "," |
 | suggestion | string | To add the suggestion list of channels' names. To put more than 1 you can separate by "," |
-| shortFilter | string | To add a checkbox to filter out short videos. Details |
+| shortFilter | string | To add a checkbox to filter out short videos. [Details](#shortfilter) |
 
-## shortFilter :
-The `shortFilter` query param enables the addition of filters ( API filters ) to get expected videos in search results. It also creates a checkbox in UI to control searching. It can add more than 1 filter by adding a "," between values. like
+## shortFilter:
+The `shortFilter` query param enables the addition of filters ( [API filters](https://developers.dailymotion.com/api/#video-filters) ) to get expected videos in search results. It also creates a checkbox in UI to control searching. It can add more than 1 filter by adding a "," between values. like
 ```
 shortFilter=[exclude_channel_ids=tv]
 or 

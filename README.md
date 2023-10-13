@@ -24,7 +24,7 @@ Although it is not mandatory, you can send information as query parameters along
 | shortFilter | string | To add a checkbox to filter out short videos. Details |
 
 ## shortFilter :
-The `shortFilter` query param enables to addition of filters ( API filters ) to get expected videos in search results. It also creates a checkbox in UI to control searchinng. It can add more than filters by `","`. like
+The `shortFilter` query param enables the addition of filters ( API filters ) to get expected videos in search results. It also creates a checkbox in UI to control searching. It can add more than 1 filter by adding a "," between values. like
 ```
 shortFilter=[exclude_channel_ids=tv]
 or 

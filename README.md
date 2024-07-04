@@ -62,4 +62,4 @@ document.getElementById('searchIframe').contentWindow.postMessage( {
 | `dm-parent-add-style` | link address for style. eg.,`https://staging.dmvs-apac.com/SearchIframe/lab/custom-style.css` |
 
 ### Test page : 
-- [https://staging.dmvs-apac.com/SearchIframe/lab/index.html](https://staging.dmvs-apac.com/SearchIframe/lab/index.html)
+- [https://dmvs-apac.github.io/dm-video-finder-pro-doc/lab.html](https://dmvs-apac.github.io/dm-video-finder-pro-doc/lab.html)

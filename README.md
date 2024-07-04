@@ -8,7 +8,7 @@ Dailymotion Video Finder Pro is an Iframe-based solution to search videos from g
 - **Embed Code:**
 
 ```html
-<iframe src="https://staging.dmvs-apac.com/SearchIframe/lab/iframe.html?sort=relevance&owners=acm-entertainment&suggestion=acm-entertainment,augusta-margaret-river-mail" id="searchIframe"></iframe>
+<iframe src="https://video-finder-pro.dailymotion.com?sort=relevance&owners=acm-entertainment&suggestion=acm-entertainment,augusta-margaret-river-mail" id="searchIframe"></iframe>
 ```
 - Iframe can capture information from its query parameters. 
 - Iframe can send and listen to events with the host site.

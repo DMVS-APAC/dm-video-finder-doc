@@ -1,0 +1,101 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Test - Dailymotion Article</title>
+    <style>
+        iframe{
+          border: 1px solid #d8d8d8;
+          width: 400px;
+          height: 600px;
+          float: right;
+        }
+        .video-pick{
+            position: absolute;
+            top: 200px;
+            left: 100px;
+            display: flex;
+        }
+        .thumbnail{
+            width: 200px;
+            height: 112.5px;
+        }
+        .info div {
+            margin: 10px;
+        }
+        .input-wrapper{
+            position: absolute;
+            top: 30px;
+        }
+        #linkAddress{
+            width: 350px;
+        }
+    </style>
+</head>
+<body>
+    <div class="input-wrapper">
+        <input type="text" value="custom-style.css" id="linkAddress">
+        <button onclick="addLink()">Add style link</button>
+    </div>
+    <div class="video-pick" id="videoPick"></div>
+
+    <iframe src="https://video-finder-pro.dailymotion.com?sort=relevance&shortFilter=[exclude_channel_ids=tv]&owners=australiancommunitymedia" id="searchIframe"></iframe>
+
+    <script>
+        window.addEventListener("message",(msg)=>{
+            if(msg.data.from && msg.data.from==="dm-search-loaded"){
+                loading = true;
+                onLoad();
+            }
+            if(msg.data && msg.data.from && msg.data.from==="dm-search-video-click"){
+                console.log(msg.data.info);
+                videoPick(msg.data.info);
+            }
+        })
+        let suggestion = [
+            "acm-entertainment","augusta-margaret-river-mail","australiancommunitymedia","bay-post-moruya-examiner","beaudesert-times","bega-district-news","bendigo-advertiser","blayney-chronicle","bunbury-mail","busselton-dunsborough-mail","central-western-daily","cowra-guardian","crookwell-gazette","daily-liberal","dungog-chronicle","farm-online","farm-weekly","forbes-advocate","gloucester-advocate","goulburn-post","great-lakes-advocate","hawkesbury-gazette","hunter-valley-news","illawarra-mercury","katherine-times","lithgow-mercury","liverpool-city-champion","mandurah-mail","manning-river-times","milton-ulladulla-times","moree-champion","mudgee-guardian","muswellbrook-chronicle","namoi-valley-independent","naracoorte-herald","newcastle-herald","northern-beaches-review","parkes-champion-post","port-lincoln-times","port-macquarie-news","port-stephens-examiner","queensland-country-life","redland-city-bulletin","south-coast-register","southern-highland-news","stock-and-land","stock-journal","tenterfield-star","the-advertiser-cessnock","the-advocate","the-advocate-hepburn","the-ararat-advertiser","the-area-news","the-armidale-express","the-border-mail","the-canberra-times","the-courier","the-daily-advertiser","the-esperance-express","the-examiner","the-inverell-times","the-irrigator","the-land","the-macleay-argus","the-maitland-mercury","the-murray-valley-standard","the-north-west-star","the-northern-daily-leader","the-queanbeyan-age","the-senior","the-standard","the-times","the-transcontinental","the-wimmera-mail-times","western-advocate","whyalla-news","yass-tribune"
+        ];
+        // On loading 
+        function onLoad(){
+            // add suggestion list
+            addSuggestion();
+        }
+        function addSuggestion(){
+            document.getElementById('searchIframe').contentWindow.postMessage( {
+                from: "dm-parent-add-suggestion",
+                info : suggestion
+            },"*");
+        }
+
+        function addLink(){
+            let value = document.getElementById("linkAddress").value;
+            if(value){
+                document.getElementById('searchIframe').contentWindow.postMessage( {
+                    from: "dm-parent-add-style",
+                    info : value
+                },"*");
+            }
+        }
+
+        function videoPick(info){
+            let videoPick = document.getElementById("videoPick");
+            videoPick.innerHTML = `
+                <div style="background: url(${info.thumbnail_480_url}) no-repeat center center / cover;" class="thumbnail"></div>
+                <div class="info">
+                    <div>VideoId : ${info.id}</div>    
+                    <div>Title : ${info.title}</div> 
+                </div>
+            `
+        }
+    
+    
+        
+    </script>
+</body>
+</html>
+
+

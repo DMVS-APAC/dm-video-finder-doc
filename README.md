@@ -9,6 +9,7 @@ Dailymotion Video Finder Pro is an Iframe-based solution to search videos from g
 
 ```html
 <iframe src="https://video-finder-pro.dailymotion.com?sort=relevance&owners=acm-entertainment&suggestion=acm-entertainment,augusta-margaret-river-mail" id="searchIframe"></iframe>
+
 ```
 - Iframe can capture information from its query parameters. 
 - Iframe can send and listen to events with the host site.
@@ -21,6 +22,41 @@ Although it is not mandatory, you can send information as query parameters along
 | sort | string | To select the sorting order for search results as default. You can set it as `recent`, `relevance`, or `random`. [API reference](https://developers.dailymotion.com/api/#video-sort-filter) |
 | owners | string | To add the channels name for search results as default. To put more than 1 you can separate by "," |
 | suggestion | string | To add the suggestion list of channels' names. To put more than 1 you can separate by "," |
+| shortFilter | string | To add a checkbox to filter out short videos. [Details](#shortfilter) |
+
+## shortFilter:
+The `shortFilter` query param enables the addition of filters ( [API filters](https://developers.dailymotion.com/api/#video-filters) ) to get expected videos in search results. It also creates a checkbox in UI to control searching. It can add more than 1 filter by adding a "," between values. like
+```
+shortFilter=[exclude_channel_ids=tv]
+or 
+shortFilter=[exclude_channel_ids=tv,longer_than=1]
+```
+> Category is called [channel in API]((https://api.dailymotion.com/channels)).
+<details>
+<summary> Category IDs and names based on API </summary>
+
+  
+| Channnel ID        | Category name                   |
+|------------|------------------------|
+| animals    | Animals                |
+| auto       | Cars                   |
+| people     | Celeb                  |
+| fun        | Comedy & Entertainment |
+| creation   | Creative               |
+| school     | Education              |
+| videogames | Gaming                 |
+| kids       | Kids                   |
+| lifestyle  | Lifestyle & How-to     |
+| shortfilms | Movies                 |
+| music      | Music                  |
+| news       | News                   |
+| sport      | Sports                 |
+| tech       | Tech                   |
+| travel     | Travel                 |
+| tv         | TV                     |
+| webcam     | Webcam                 |
+
+</details>
 
 ## Events : 
 With [`cross-window-communication`](https://javascript.info/cross-window-communication) the iframe sends events based on interaction inside the iframe. Here is how an event is captured from the host page.

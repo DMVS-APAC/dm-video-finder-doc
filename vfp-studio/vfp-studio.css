@@ -1,0 +1,286 @@
+@font-face {
+    font-family: ABCFavorit;
+    src: url(//corpostatic.dailymotion.com/corporate-cms-release-assets-prod/8bb40080/app/themes/dailymotion/front/build/fonts/ABCFavorit/ABCFavorit-Regular.woff2) format("woff2"),url(//corpostatic.dailymotion.com/corporate-cms-release-assets-prod/8bb40080/app/themes/dailymotion/front/build/fonts/ABCFavorit/ABCFavorit-Regular.woff) format("woff"),url(//corpostatic.dailymotion.com/corporate-cms-release-assets-prod/8bb40080/app/themes/dailymotion/front/build/fonts/ABCFavorit/ABCFavorit-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-display: swap
+}
+@font-face {
+    font-family: DailySans;
+    src: url(//corpostatic.dailymotion.com/corporate-cms-release-assets-prod/8bb40080/app/themes/dailymotion/front/build/fonts/DailySans/DailySans-BulkyWide.woff2) format("woff2"),url(//corpostatic.dailymotion.com/corporate-cms-release-assets-prod/8bb40080/app/themes/dailymotion/front/build/fonts/DailySans/DailySans-BulkyWide.woff) format("woff"),url(//corpostatic.dailymotion.com/corporate-cms-release-assets-prod/8bb40080/app/themes/dailymotion/front/build/fonts/DailySans/DailySans-BulkyWide.ttf) format("truetype");
+    font-style: normal;
+    font-display: swap
+}
+body *{
+    box-sizing: border-box;
+}
+body{
+    --theme-color: #0a0a0a;
+    --theme-border-light: #e5e5e5;
+    --theme-border-dark: #aeaeae;
+    --theme-bulky: DailySans;
+    --theme-background-light: #f8f8f8;
+    --theme-font: ABCFavorit,Retina,Arial,sans-serif;
+    font-family: var(--theme-font);
+    color: var(--theme-color);
+}
+header{
+    height: 64px;
+    border-bottom: 1px solid var(--theme-border-light);
+    display: flex;
+    align-items: flex-end;
+    padding: 20px 0px;
+    box-sizing: border-box;
+    background-color: #fff; 
+    padding-left: 20px;
+}
+.logo{
+    font-size: 20px;
+    margin-left: 7px;
+    text-decoration: none;
+    color: #0a0a0a;
+    font-style: italic;
+    font-weight: 600;
+}
+main{
+    max-width: calc(100% - 420px);
+}
+h4{
+    font-family: var(--theme-bulky);
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+/* --------------------------------------------------------------- */
+
+section.iframe-sec{
+    position: fixed;
+    padding: 10px;
+    top: 0;
+    right: 0;
+    background: #fff;
+    height: 100vh;
+    display: flex;
+    z-index: 100;
+}
+section.iframe-sec iframe{
+    width: 400px;
+    border: 1px solid var(--theme-border-light);
+}
+/* --------------------------------------------------------------- */
+section.setup-sec{
+    max-width: 650px;
+    width: 100%;
+    margin: auto;
+}
+.embed-wrap{
+    margin:  20px 0 30px 0;
+}
+.controls-wrap{
+    padding-top: 25px;
+    margin-bottom: 30px;
+    border-top: 1px solid var(--theme-border-light);
+}
+/* -----------------------------------------*/
+.embed-iframe{    
+    position: relative;
+    display: flex;
+}
+.embed-text{
+    width: 100%;
+    min-height: 150px;
+    resize: none;
+    overflow: auto;
+    padding: 10px 130px 30px 10px;
+    border: 1px solid var(--theme-border-light);
+    background-color: var(--theme-background-light);
+}
+.embed-btn{
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    display: flex;
+    width: 130px;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-around;
+    border: 1px solid var(--theme-border-light);
+    background-color: var(--theme-background-light);
+    border-left: none;
+}
+.embed-iframe .btn{
+    width: 100%;
+    height: 30px;
+    font-family: var(--theme-font);
+    background-color: #fff;
+    border: 1px solid #0d0d0d;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.embed-iframe .btn:hover{
+    background-color: #0d0d0d;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+/* -----------------------------------------*/
+.input-wrap{
+    margin-bottom: 30px;
+}
+.input-el{
+    position: relative;
+}
+.title {
+    margin-bottom: 10px;display: flex;
+    justify-content: space-between;
+}
+.text-input{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid var(--theme-border-dark);
+    padding: 10px 80px 10px 10px;
+}
+.sample-btn{
+    border: 1px solid var(--theme-border-dark);
+    background: none;
+    font-style: italic;
+    color: var(--theme-border-dark);
+    cursor: pointer;
+    font-size: 0.8em;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 5px;
+}
+.sample-btn:hover{
+    color: var(--theme-color);
+    border-color: var(--theme-color);
+}
+
+
+
+
+/* ------------- switch box css */
+  @supports (-webkit-appearance: none) or (-moz-appearance: none) {
+    .checkbox-wrapper-14 input[type=checkbox] {
+      --active: #275EFE;
+      --active-inner: #fff;
+      --focus: 2px rgba(39, 94, 254, .3);
+      --border: #BBC1E1;
+      --border-hover: #275EFE;
+      --background: #fff;
+      --disabled: #F6F8FF;
+      --disabled-inner: #E1E6F9;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      height: 21px;
+      outline: none;
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      margin: 0;
+      cursor: pointer;
+      border: 1px solid var(--bc, var(--border));
+      background: var(--b, var(--background));
+      transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+    }
+    .checkbox-wrapper-14 input[type=checkbox]:after {
+      content: "";
+      display: block;
+      left: 0;
+      top: 0;
+      position: absolute;
+      transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+    }
+    .checkbox-wrapper-14 input[type=checkbox]:checked {
+      --b: var(--active);
+      --bc: var(--active);
+      --d-o: .3s;
+      --d-t: .6s;
+      --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+    }
+    .checkbox-wrapper-14 input[type=checkbox]:disabled {
+      --b: var(--disabled);
+      cursor: not-allowed;
+      opacity: 0.9;
+    }
+    .checkbox-wrapper-14 input[type=checkbox]:disabled:checked {
+      --b: var(--disabled-inner);
+      --bc: var(--border);
+    }
+    .checkbox-wrapper-14 input[type=checkbox]:disabled + label {
+      cursor: not-allowed;
+    }
+    .checkbox-wrapper-14 input[type=checkbox]:hover:not(:checked):not(:disabled) {
+      --bc: var(--border-hover);
+    }
+    .checkbox-wrapper-14 input[type=checkbox]:focus {
+      box-shadow: 0 0 0 var(--focus);
+    }
+    .checkbox-wrapper-14 input[type=checkbox]:not(.switch) {
+      width: 21px;
+    }
+    .checkbox-wrapper-14 input[type=checkbox]:not(.switch):after {
+      opacity: var(--o, 0);
+    }
+    .checkbox-wrapper-14 input[type=checkbox]:not(.switch):checked {
+      --o: 1;
+    }
+    .checkbox-wrapper-14 input[type=checkbox] + label {
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+      margin-left: 4px;
+      font-size: 0.8em;
+      font-style: italic;
+    }
+
+    .checkbox-wrapper-14 input[type=checkbox]:not(.switch) {
+      border-radius: 7px;
+    }
+    .checkbox-wrapper-14 input[type=checkbox]:not(.switch):after {
+      width: 5px;
+      height: 9px;
+      border: 2px solid var(--active-inner);
+      border-top: 0;
+      border-left: 0;
+      left: 7px;
+      top: 4px;
+      transform: rotate(var(--r, 20deg));
+    }
+    .checkbox-wrapper-14 input[type=checkbox]:not(.switch):checked {
+      --r: 43deg;
+    }
+    .checkbox-wrapper-14 input[type=checkbox].switch {
+      width: 38px;
+      border-radius: 11px;
+    }
+    .checkbox-wrapper-14 input[type=checkbox].switch:after {
+      left: 2px;
+      top: 1px;
+      border-radius: 50%;
+      width: 17px;
+      height: 17px;
+      background: var(--ab, var(--border));
+      transform: translateX(var(--x, 0));
+    }
+    .checkbox-wrapper-14 input[type=checkbox].switch:checked {
+      --ab: var(--active-inner);
+      --x: 17px;
+    }
+    .checkbox-wrapper-14 input[type=checkbox].switch:disabled:not(:checked):after {
+      opacity: 0.6;
+    }
+  }
+
+  .checkbox-wrapper-14 * {
+    box-sizing: inherit;
+  }
+  .checkbox-wrapper-14 *:before,
+  .checkbox-wrapper-14 *:after {
+    box-sizing: inherit;
+  }

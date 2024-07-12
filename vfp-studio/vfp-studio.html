@@ -1,0 +1,89 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>VFP studio</title>
+        <link href="vfp-studio.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <a href="/"><img src="https://corpostatic.dailymotion.com/corporate-cms-release-assets-prod/8bb40080/app/themes/dailymotion/front/build/images/logo.svg"></a>
+            <a href="/" class="logo">VFP studio</a>
+        </header>
+        <main>
+            <section class="setup-sec">
+                <div class="embed-wrap">
+                    <h4>Embed Code </h4>
+                    <div class="embed-iframe">
+                        <textarea id="embedIframe" name="embedIframe" class="embed-text">
+                        </textarea>
+                        <div class="embed-btn">
+                            <button id="copy" class="btn">Copy</button>
+                            <button id="apply" class="btn">Apply</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls-wrap">
+                    <h4>Default Settings </h4>
+                    <div class="input-wrap">
+                        <div class="title">Search text </div>
+                        <div class="input-el">
+                            <input type="text" id="searchText" class="text-input"/>
+                            <button class="sample-btn" id="sampleForSearch">sample</button>
+                        </div>
+                    </div>
+                    <div class="input-wrap">
+                        <div class="title">Sort filter </div>
+                        <div class="input-el">
+                            <input type="radio" id="recent" name="sortFilter" value="recent"  checked>
+                            <label for="recent">recent</label>
+                            <input type="radio" id="relevance" name="sortFilter" value="relevance">
+                            <label for="relevance">relevance</label>
+                            <input type="radio" id="random" name="sortFilter" value="random">
+                            <label for="random">random</label>
+                        </div>
+                    </div>
+                    <div class="input-wrap">
+                        <div class="title">Exclude short filter</div>
+                        <div class="input-el">
+                            <input type="text" id="shortFilter" class="text-input"/>
+                            
+                            <button class="sample-btn" id="sampleForShort">sample</button>
+                        </div>
+                    </div>
+                    <div class="input-wrap">
+                        <div class="title">Owners </div>
+                        <div class="input-el">
+                            <input type="text" id="owners" class="text-input"/>
+                            <button class="sample-btn" id="sampleForOnwers">sample</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="controls-wrap">
+                    <h4>Owners' suggestion </h4>
+                    <div class="input-wrap">
+                        <div class="title">
+                            <span>Owners</span> 
+                            <div class="checkbox-wrapper-14">
+                                <input id="suggestionJs" type="checkbox" class="switch">
+                                <label for="suggestionJs">use javascript</label>
+                            </div>
+                        </div>
+                        <div class="input-el">
+                            <input type="text" id="suggestion" class="text-input"/>
+                            <button class="sample-btn" id="sampleForSuggestion">sample</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="iframe-sec" >
+                <iframe id="vfpIframe" src=""></iframe>
+            </section>
+        </main>
+        <script src="vfp-studio.js"></script>
+    </body>
+</html>

@@ -109,12 +109,12 @@
             )+
             (
                 defaultParams.shortFilter ? 
-                `shortFilter=[${defaultParams.shortFilter}]` : 
+                `&shortFilter=[${defaultParams.shortFilter}]` : 
                 "" 
             )+
             (
                 defaultParams.searchText ? 
-                `search=${encodeURI(defaultParams.searchText)}` : 
+                `&search=${encodeURI(defaultParams.searchText)}` : 
                 "" 
             )+
             (defaultParams.owners? `&owners=${defaultParams.owners}` : "" )+

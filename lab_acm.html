@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>VFP - Test Page</title>
+    <style>
+        body{
+            display: flex;
+        }
+        #searchIframe{
+            border: 1px solid #d8d8d8;
+            width: 476px;
+            height: 96vh;
+            margin-left: auto;
+        }
+        .video-pick{
+            width: calc(100% - 660px);
+            overflow: auto;
+            margin: 20px;
+        }
+        .video-pick .button-wrapper{
+            padding-bottom: 12px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .video-pick button{
+            background: none;
+            border: none;
+            font-size: 1em;
+            font-weight: bold;
+            margin: 0 10px;
+            color: #000;
+            cursor: pointer;
+        }
+        .video-pick button.json-btn{
+            color: #a5a5a5;
+        }
+        .video-pick.json-show button.json-btn{
+            color: #000;
+        }
+        .video-pick.json-show button.player-btn{
+            color: #a5a5a5;
+        }
+
+        .video-pick div.player-div{
+            margin: 50px auto;
+            max-width: 600px;
+        }
+        
+        .video-pick div.json-div{
+            display: none;
+        }
+        .video-pick.json-show div.json-div{
+            display: block;
+        }
+        .video-pick.json-show div.player-div{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <iframe src="https://video-finder-pro.dailymotion.com?shortFilter=[exclude_channel_ids=tv]&owners=australiancommunitymedia&theme=dark" id="searchIframe"></iframe>
+
+    <script>
+        window.addEventListener("message",(msg)=>{
+            if(msg.data.from && msg.data.from==="dm-search-loaded"){
+                loading = true;
+                onLoad();
+            }
+            if(msg.data && msg.data.from && msg.data.from==="dm-search-video-click"){
+                videoPick(msg.data.info);
+            }
+        })
+        let suggestion = [
+            "acm-entertainment","augusta-margaret-river-mail","australiancommunitymedia","bay-post-moruya-examiner","beaudesert-times","bega-district-news","bendigo-advertiser","blayney-chronicle","bunbury-mail","busselton-dunsborough-mail","central-western-daily","cowra-guardian","crookwell-gazette","daily-liberal","dungog-chronicle","farm-online","farm-weekly","forbes-advocate","gloucester-advocate","goulburn-post","great-lakes-advocate","hawkesbury-gazette","hunter-valley-news","illawarra-mercury","katherine-times","lithgow-mercury","liverpool-city-champion","mandurah-mail","manning-river-times","milton-ulladulla-times","moree-champion","mudgee-guardian","muswellbrook-chronicle","namoi-valley-independent","naracoorte-herald","newcastle-herald","northern-beaches-review","parkes-champion-post","port-lincoln-times","port-macquarie-news","port-stephens-examiner","queensland-country-life","redland-city-bulletin","south-coast-register","southern-highland-news","stock-and-land","stock-journal","tenterfield-star","the-advertiser-cessnock","the-advocate","the-advocate-hepburn","the-ararat-advertiser","the-area-news","the-armidale-express","the-border-mail","the-canberra-times","the-courier","the-daily-advertiser","the-esperance-express","the-examiner","the-inverell-times","the-irrigator","the-land","the-macleay-argus","the-maitland-mercury","the-murray-valley-standard","the-north-west-star","the-northern-daily-leader","the-queanbeyan-age","the-senior","the-standard","the-times","the-transcontinental","the-wimmera-mail-times","western-advocate","whyalla-news","yass-tribune"
+        ];
+        // On loading 
+        function onLoad(){
+            // add suggestion list
+            addSuggestion();
+        }
+        function addSuggestion(){
+            document.getElementById('searchIframe').contentWindow.postMessage( {
+                from: "dm-parent-add-suggestion",
+                info : suggestion
+            },"*");
+        }
+    
+    
+        
+    </script>
+
+    <script src="https://geo.dailymotion.com/libs/player/xijpc.js"></script>
+</body>
+</html>
+
+

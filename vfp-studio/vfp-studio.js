@@ -1,11 +1,12 @@
 
 (()=>{
-    const iframeURL = "https://video-finder-pro.dailymotion.com?";
+    const iframeURL = "https://video-finder-pro.dailymotion.com";
     const defaultParams = {
         sort: "recent",
         shortFilter: "",
         owners: "",
         suggestion:"",
+        theme:"",
         searchText:""
     };
     const sample = {
@@ -25,6 +26,7 @@
     
     const searchText = document.getElementById("searchText");
     const shortFilter = document.getElementById("shortFilter");
+    const themeDark = document.getElementById("darkThemeBtn");
     const owners = document.getElementById("owners");
     const suggestion = document.getElementById("suggestion");
     const suggestionJs = document.getElementById("suggestionJs");
@@ -43,6 +45,12 @@
                 updateEmbedCode();
             })
         });
+    themeDark.addEventListener("change",()=>{
+        
+        defaultParams.theme = themeDark.checked? "dark" : "";
+        updateEmbedCode();
+    })
+        darkThemeBtn
     searchText.addEventListener("input",()=>{
         defaultParams.searchText = searchText.value;
         updateEmbedCode();
@@ -104,7 +112,12 @@
         const queryParams = 
             (
                 defaultParams.sort && defaultParams.sort!=="recent"? 
-                `sort=${defaultParams.sort}` : 
+                `&sort=${defaultParams.sort}` : 
+                "" 
+            )+
+            (
+                defaultParams.theme? 
+                `&theme=${defaultParams.theme}` : 
                 "" 
             )+
             (
@@ -135,7 +148,7 @@
         },"*");
     }`:"";
 
-        finaURL = `${iframeURL}${queryParams}`;
+        finaURL = `${iframeURL}${queryParams ? "?"+queryParams.replace(/^./, "") : ""}`;
         embedIframe.value = `<iframe id="vfpIframe" src="${finaURL}" ></iframe>${javascriptCode? `
             
 <script>${javascriptCode}

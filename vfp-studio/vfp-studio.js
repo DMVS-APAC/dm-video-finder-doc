@@ -1,6 +1,6 @@
 
 (()=>{
-    const iframeURL = "https://staging.dmvs-apac.com/video-finder-pro/lab/iframe.html?";
+    const iframeURL = "https://video-finder-pro.dailymotion.com?";
     const defaultParams = {
         sort: "recent",
         shortFilter: "",

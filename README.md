@@ -23,6 +23,7 @@ Although it is not mandatory, you can send information as query parameters along
 | owners | string | To add the channels name for search results as default. To put more than 1 you can separate by "," |
 | suggestion | string | To add the suggestion list of channels' names. To put more than 1 you can separate by "," |
 | shortFilter | string | To add a checkbox to filter out short videos. [Details](#shortfilter) |
+| theme | string | To set theme. you can set it `dark`. By default it has `light` theme |
 
 ## shortFilter:
 The `shortFilter` query param enables the addition of filters ( [API filters](https://developers.dailymotion.com/api/#video-filters) ) to get expected videos in search results. It also creates a checkbox in UI to control searching. It can add more than 1 filter by adding a "," between values. like
@@ -85,17 +86,11 @@ document.getElementById('searchIframe').contentWindow.postMessage( {
      from: "dm-parent-add-suggestion", // event name
      info : ["CHANNEL_NAME_1", "CHANNEL_NAME_2", ...] // array of channel names
 },"*");
-
-document.getElementById('searchIframe').contentWindow.postMessage( {
-    from: "dm-parent-add-style",
-    info : "https://staging.dmvs-apac.com/SearchIframe/lab/custom-style.css"
-},"*");
 ```
 
 | Event Name | Information | 
 | :---: | :---: |
 | `dm-parent-add-suggestion` | ``` ["CHANNEL_NAME_1", "CHANNEL_NAME_2", ...]``` |
-| `dm-parent-add-style` | link address for style. eg.,`https://staging.dmvs-apac.com/SearchIframe/lab/custom-style.css` |
 
 ### Test page : 
 - [https://dmvs-apac.github.io/dm-video-finder-pro-doc/lab.html](https://dmvs-apac.github.io/dm-video-finder-pro-doc/lab.html)

@@ -4,10 +4,8 @@ In this document, we will show steps to embed player from [Dailymotion Video Fin
 
 ## Player Embed Script(PES) :
 
-- **1. Get video id**
--- Capture the event when a video thumbnail is clicked inside the Dailymotion Video Finder and get the video id.
-**2. Create PES with `data-video` attribute**
--- Create player embed script with `data-video` attribute. Set the value of data-video to `videoid`.
+1. **Get video id** : Capture the event when a video thumbnail is clicked inside the Dailymotion Video Finder and get the video id.
+2. **Create PES with `data-video` attribute** : Create player embed script with `data-video` attribute. Set the value of data-video to `videoid`.
 
 ```js
 // To capture the event when a video thumbnail is clicked

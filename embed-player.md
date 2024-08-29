@@ -13,19 +13,19 @@ In this document, we will show steps to embed a player from [Dailymotion Video F
 <div id="my-dailymotion-player"> My Player placeholder </div>
 
 <script>
-  // To capture the event when a video thumbnail is clicked
-  window.addEventListener("message",(msg)=>{
-    if(msg.data && msg.data.from && msg.data.from==="dm-search-video-click"){
-      const videoid = msg.data.info.id;
-      // creating PES script
-      const script = document.createElement("script");
-      script.src = "https://geo.dailymotion.com/player/{Player ID}.js";
-      script.setAttribute("data-video",videoid);
+    // To capture the event when a video thumbnail is clicked
+    window.addEventListener("message",(msg)=>{
+        if(msg.data && msg.data.from && msg.data.from==="dm-search-video-click"){
+            const videoid = msg.data.info.id;
+            // creating PES script
+            const script = document.createElement("script");
+            script.src = "https://geo.dailymotion.com/player/{Player ID}.js";
+            script.setAttribute("data-video",videoid);
 
-      // append the PES script to the player placeholder
-      document.getElementById("my-dailymotion-player").appendChild(script);
-    }
-  })
+            // append the PES script to the player placeholder
+            document.getElementById("my-dailymotion-player").appendChild(script);
+        }
+    })
 </script>
 ```
 > [PES embed demo](https://dmvs-apac.github.io/dm-video-finder-pro-doc/pes_embed.html)
@@ -45,21 +45,20 @@ In this document, we will show steps to embed a player from [Dailymotion Video F
 <div id="my-dailymotion-player"> My Player placeholder </div>
 
 <script>
-  
-  // To capture the event when a video thumbnail is clicked
-  window.addEventListener("message",(msg)=>{
-    if(msg.data && msg.data.from && msg.data.from==="dm-search-video-click"){
-      const videoid = msg.data.info.id;
-      // create the player
-      dailymotion
-      .createPlayer("my-dailymotion-player", {
-              video: videoid,
-      })
-      .then((player) => console.log(player))
-      .catch((e) => console.error(e));
-    }
-  })
-    
+
+    // To capture the event when a video thumbnail is clicked
+    window.addEventListener("message",(msg)=>{
+        if(msg.data && msg.data.from && msg.data.from==="dm-search-video-click"){
+            const videoid = msg.data.info.id;
+            // create the player
+            dailymotion
+            .createPlayer("my-dailymotion-player", {
+                video: videoid,
+            })
+            .then((player) => console.log(player))
+            .catch((e) => console.error(e));
+        }
+    })
 </script>
 ```
 > [PLS embed demo](https://dmvs-apac.github.io/dm-video-finder-pro-doc/pls_embed.html)
@@ -75,23 +74,23 @@ In this document, we will show steps to embed a player from [Dailymotion Video F
 <!-- Player placeholder -->
 <div id="my-dailymotion-player">My Player placeholder </div>
 <script>
-    window.addEventListener("message",(msg)=>{
-      if(msg.data && msg.data.from && msg.data.from==="dm-search-video-click"){
-          const videoid = msg.data.info.id;
-          // create the iframe
-          document.getElementById("my-dailymotion-player").innerHTML = `
-            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
-              <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" 
-                frameborder="0" 
-                type="text/html" 
-                src="https://geo.dailymotion.com/player/{Player ID}.html?video=${videoid}" 
-                width="100%"
-                height="100%"
-                allowfullscreen 
-                allow="autoplay; fullscreen; picture-in-picture; web-share">
-              </iframe>
-            </div>`;
-          }
+    window.addEventListener("message",(msg)=>{
+        if(msg.data && msg.data.from && msg.data.from==="dm-search-video-click"){
+            const videoid = msg.data.info.id;
+            // create the iframe
+            document.getElementById("my-dailymotion-player").innerHTML = `
+                <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+                <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" 
+                    frameborder="0" 
+                    type="text/html" 
+                    src="https://geo.dailymotion.com/player/{Player ID}.html?video=${videoid}" 
+                    width="100%"
+                    height="100%"
+                    allowfullscreen 
+                    allow="autoplay; fullscreen; picture-in-picture; web-share">
+                </iframe>
+                </div>`;
+            }
       })
 </script>
 ```

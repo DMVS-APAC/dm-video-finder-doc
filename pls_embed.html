@@ -18,28 +18,32 @@
             right: 0px;
             top: 0;
         }
-        #my-dailymotion-player{
+        .player-wrapper{
             width: 600px;
             margin: 100px 0 0 100px;
         }
     </style>
 </head>
 <body>
-    <div id="my-dailymotion-player"> My Player placeholder </div>
 
     <iframe src="https://video-finder-pro.dailymotion.com?shortFilter=[exclude_channel_ids=tv]&owners=australiancommunitymedia" id="searchIframe"></iframe>
-
+    
+    <script src="https://geo.dailymotion.com/libs/player/xijpc.js"></script>
+    
+    <div class="player-wrapper">
+        <div id="my-dailymotion-player"> My Player placeholder </div>
+    </div>
     <script>
         window.addEventListener("message",(msg)=>{
             if(msg.data && msg.data.from && msg.data.from==="dm-search-video-click"){
                 const videoid = msg.data.info.id;
-                const script = document.createElement("script");
-                // PES script
-                script.src = "https://geo.dailymotion.com/player/xijpc.js";
-                script.setAttribute("data-video",videoid);
-
-                document.getElementById("my-dailymotion-player").innerHTML = "";
-                document.getElementById("my-dailymotion-player").appendChild(script);
+                // create the player
+                dailymotion
+                    .createPlayer("my-dailymotion-player", {
+                    video: videoid,
+                })
+                .then((player) => console.log(player))
+                .catch((e) => console.error(e));
             }
         })
         

@@ -82,13 +82,13 @@ In this document, we will show steps to embed a player from [Dailymotion Video F
           document.getElementById("my-dailymotion-player").innerHTML = `
             <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
               <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" 
-              frameborder="0" 
-              type="text/html" 
-              src="https://geo.dailymotion.com/player/{Player ID}.html?video=${videoid}" 
-              width="100%"
-              height="100%"
-              allowfullscreen 
-              allow="autoplay; fullscreen; picture-in-picture; web-share">
+                frameborder="0" 
+                type="text/html" 
+                src="https://geo.dailymotion.com/player/{Player ID}.html?video=${videoid}" 
+                width="100%"
+                height="100%"
+                allowfullscreen 
+                allow="autoplay; fullscreen; picture-in-picture; web-share">
               </iframe>
             </div>`;
           }

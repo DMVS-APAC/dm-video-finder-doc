@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Video finder - PES Embed</title>
+    <style>
+        body{
+            display: flex;
+        }
+        #searchIframe{
+            border: 1px solid #d8d8d8;
+            width: 476px;
+            height: 96vh;
+            position: absolute;
+            right: 0px;
+            top: 0;
+        }
+        .player-div{
+            width: 600px;
+            margin: 100px 0 0 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="player-div" id="playerDiv">
+        Player placeholder
+    </div>
+
+    <iframe src="https://video-finder-pro.dailymotion.com?shortFilter=[exclude_channel_ids=tv]&owners=australiancommunitymedia" id="searchIframe"></iframe>
+
+    <script>
+        window.addEventListener("message",(msg)=>{
+            if(msg.data && msg.data.from && msg.data.from==="dm-search-video-click"){
+                const videoid = msg.data.info.id;
+                const script = document.createElement("script");
+                // PES script
+                script.src = "https://geo.dailymotion.com/player/xijpc.js";
+                script.setAttribute("data-video",videoid);
+
+                document.getElementById("playerDiv").innerHTML = "";
+                document.getElementById("playerDiv").appendChild(script);
+            }
+        })
+        
+    </script>
+
+</body>
+</html>
+
+

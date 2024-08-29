@@ -64,7 +64,7 @@ With [`cross-window-communication`](https://javascript.info/cross-window-communi
 ```JS
 // To capture the event when a video thumbnail is clicked
 window.addEventListener("message",(msg)=>{
-  if(msg.data && msg.data.from && msg.data.from==="dm-search-click"){
+  if(msg.data && msg.data.from && msg.data.from==="dm-search-video-click"){
        console.log(msg.data.info);
   }
 })
@@ -75,7 +75,7 @@ window.addEventListener("message",(msg)=>{
 | Event Name | Information | 
 | :---: | :---: |
 | `dm-search-loaded` | To inform iframe is loaded. It can be used as a start point to sent event into iframe. |
-| `dm-search-click` | ``` {id:{VIDOE_ID}, thumbnail_480_url:{VIDEO_THUMBNAIL}, duration:{VIDEO_DURATION}}``` |
+| `dm-search-video-click` | ``` {id:{VIDOE_ID}, thumbnail_480_url:{VIDEO_THUMBNAIL}, duration:{VIDEO_DURATION}}``` |
 
 ### Events To Iframe :
 The iframe can also listen to events from the host page if any information is required to pass to the iframe. Here is how an event is sent.

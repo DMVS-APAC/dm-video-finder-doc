@@ -93,6 +93,6 @@ document.getElementById('searchIframe').contentWindow.postMessage( {
 | `dm-parent-add-suggestion` | ``` ["CHANNEL_NAME_1", "CHANNEL_NAME_2", ...]``` |
 
 ### Test page : 
-- [Demo Page](https://dmvs-apac.github.io/dm-video-finder-pro-doc/lab.html)
-- [Demo Page(ACM use case with dark theme)](https://dmvs-apac.github.io/dm-video-finder-pro-doc/lab_acm.html)
-- [VFP playground](https://dmvs-apac.github.io/dm-video-finder-pro-doc/vfp-studio/vfp-studio.html)
+- [Demo Page](https://dmvs-apac.github.io/dm-video-finder-doc/lab.html)
+- [Demo Page(ACM use case with dark theme)](https://dmvs-apac.github.io/dm-video-finder-doc/lab_acm.html)
+- [VFP playground](https://dmvs-apac.github.io/dm-video-finder-doc/vfp-studio/vfp-studio.html)

@@ -1,6 +1,6 @@
 # How to embed player from Dailymotion Video Finder 
 
-In this document, we will show steps to embed a player from [Dailymotion Video Finder](https://dmvs-apac.github.io/dm-video-finder-pro-doc/) using different [embed methods](https://developers.dailymotion.com/guides/getting-started-with-web-sdk/#embed-methods).
+In this document, we will show steps to embed a player from [Dailymotion Video Finder](https://dmvs-apac.github.io/dm-video-finder-doc/) using different [embed methods](https://developers.dailymotion.com/guides/getting-started-with-web-sdk/#embed-methods).
 
 ## Player Embed Script(PES) :
 
@@ -28,7 +28,7 @@ In this document, we will show steps to embed a player from [Dailymotion Video F
     })
 </script>
 ```
-> [PES embed demo](https://dmvs-apac.github.io/dm-video-finder-pro-doc/pes_embed.html)
+> [PES embed demo](https://dmvs-apac.github.io/dm-video-finder-doc/pes_embed.html)
 
 ## Player Library Script(PLS) :
 
@@ -61,7 +61,7 @@ In this document, we will show steps to embed a player from [Dailymotion Video F
     })
 </script>
 ```
-> [PLS embed demo](https://dmvs-apac.github.io/dm-video-finder-pro-doc/pls_embed.html)
+> [PLS embed demo](https://dmvs-apac.github.io/dm-video-finder-doc/pls_embed.html)
 
 ## Player Iframe :
 
@@ -94,4 +94,4 @@ In this document, we will show steps to embed a player from [Dailymotion Video F
       })
 </script>
 ```
-> [Iframe embed demo](https://dmvs-apac.github.io/dm-video-finder-pro-doc/iframe_embed.html)
+> [Iframe embed demo](https://dmvs-apac.github.io/dm-video-finder-doc/iframe_embed.html)
